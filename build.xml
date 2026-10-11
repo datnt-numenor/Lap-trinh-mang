@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="TCP" default="default" basedir=".">
-    <description>Builds, tests, and runs the project TCP.</description>
+<project name="LTM" default="default" basedir=".">
+    <description>Builds, tests, and runs the project LTM.</description>
     <import file="nbproject/build-impl.xml"/>
 </project>
