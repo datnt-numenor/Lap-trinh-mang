@@ -37,13 +37,13 @@ public class Character05_ChuyenDoiLaMaThapPhan {
     }
     public static void main(String[] args) throws Exception{
         //a.
-        Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
+        Registry rg = LocateRegistry.getRegistry("36.50.135.242", 1099);
         CharacterService sv = (CharacterService) rg.lookup("RMICharacterService");
-        String s = sv.requestCharacter("B21DCCN015", "0JaasIw6");
+        String s = sv.requestCharacter("B23DCCN139", "0JaasIw6");
         System.out.println(s);
         //c. Gửi
         System.out.println(change(s));
-        sv.submitCharacter("B21DCCN015", "0JaasIw6", String.valueOf(change(s)));
+        sv.submitCharacter("B23DCCN139", "0JaasIw6", String.valueOf(change(s)));
     }
 }
 

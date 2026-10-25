@@ -19,15 +19,15 @@ import java.net.URLEncoder;
 import RMI.CharacterService;
 public class Character10_MaHoaUrl {
     public static void main(String[] args) throws Exception{
-        Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
+        Registry rg = LocateRegistry.getRegistry("36.50.135.242", 1099);
         CharacterService sv = (CharacterService) rg.lookup("RMICharacterService");
-        String s = sv.requestCharacter("B21DCCN053", "KkihaRAB");
+        String s = sv.requestCharacter("B23DCCN139", "KkihaRAB");
         System.out.println(s);
         //b.
         String ans = URLEncoder.encode(s, "UTF-8");
         System.out.println(ans);
         //c.
-        sv.submitCharacter("B21DCCN053", "KkihaRAB", ans);
+        sv.submitCharacter("B23DCCN139", "KkihaRAB", ans);
     }
 }
 //Sửa đề xong thì chịu không biết AC kiểu gì??

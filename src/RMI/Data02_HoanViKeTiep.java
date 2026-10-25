@@ -20,9 +20,9 @@ import RMI.DataService;
 public class Data02_HoanViKeTiep {
     public static void main(String[] args) throws Exception {
         // a. Nhận dữ liệu
-        Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
+        Registry rg = LocateRegistry.getRegistry("36.50.135.242", 1099);
         DataService sv = (DataService) rg.lookup("RMIDataService");
-        String s = (String) sv.requestData("B21DCCN564", "3Qe0Qb5w");
+        String s = (String) sv.requestData("B23DCCN139", "3Qe0Qb5w");
         System.out.println(s);
         //Đẩy hết vào mảng để xử lý
         s = s.replace(",", " ");
@@ -54,7 +54,7 @@ public class Data02_HoanViKeTiep {
         res = res.substring(0, res.length() - 1);
         System.out.println(res);
         // c. Gửi kết quả
-        sv.submitData("B21DCCN564", "3Qe0Qb5w", res);
+        sv.submitData("B23DCCN139", "3Qe0Qb5w", res);
     }
 }
 

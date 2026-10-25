@@ -19,9 +19,9 @@ import RMI.DataService;
 public class Data03_PhanTuLonThuK {
     public static void main(String[] args) throws Exception {
         //a. Nhận dữ liệu
-        Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
+        Registry rg = LocateRegistry.getRegistry("36.50.135.242", 1099);
         DataService sv = (DataService)rg.lookup("RMIDataService");
-        String s = (String) sv.requestData("B21DCCN008", "wzG6G9ji");
+        String s = (String) sv.requestData("B23DCCN139", "wzG6G9ji");
         System.out.println(s);
         //b. Xử lý dữ liệu
         int x = s.indexOf(";");
@@ -33,7 +33,7 @@ public class Data03_PhanTuLonThuK {
         Collections.sort(a);
         int ans = a.get(a.size() - k1);
         //c. Gửi dữ liệu
-        sv.submitData("B21DCCN008", "wzG6G9ji", ans);
+        sv.submitData("B23DCCN139", "wzG6G9ji", ans);
         System.out.println(ans);
     }
 }

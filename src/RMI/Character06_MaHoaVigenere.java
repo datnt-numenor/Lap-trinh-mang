@@ -19,9 +19,9 @@ import java.rmi.registry.*;
 import RMI.CharacterService;
 public class Character06_MaHoaVigenere {
     public static void main(String[] args) throws Exception{
-        Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
+        Registry rg = LocateRegistry.getRegistry("36.50.135.242", 1099);
         CharacterService sv = (CharacterService) rg.lookup("RMICharacterService");
-        String s = sv.requestCharacter("B21DCCN021", "Y7YMXHs4");
+        String s = sv.requestCharacter("B23DCCN139", "Y7YMXHs4");
         System.out.println(s);
         int idx = s.indexOf(";");
         String keyW = s.substring(0, idx), text = s.substring(idx + 1), ans = "";
@@ -33,6 +33,6 @@ public class Character06_MaHoaVigenere {
             ans+=z;
         }
         System.out.println(ans);
-        sv.submitCharacter("B21DCCN021", "Y7YMXHs4", ans);
+        sv.submitCharacter("B23DCCN139", "Y7YMXHs4", ans);
     } 
 }

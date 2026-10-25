@@ -35,9 +35,9 @@ public class Data10_SinhToHop {
         }
     }
     public static void main(String[] args) throws Exception{
-        Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
+        Registry rg = LocateRegistry.getRegistry("36.50.135.242", 1099);
         DataService sv = (DataService) rg.lookup("RMIDataService");
-        String s = (String)sv.requestData("B21DCCN053", "juC3u7C6");
+        String s = (String)sv.requestData("B23DCCN139", "juC3u7C6");
         //String s = "2, 0, 5, 8, 1 ;3"; 
         System.out.println(s);
         int idx = s.indexOf(";");
@@ -63,6 +63,6 @@ public class Data10_SinhToHop {
         }
         //c.
         System.out.println(ans);
-        sv.submitData("B21DCCN053", "juC3u7C6", ans);
+        sv.submitData("B23DCCN139", "juC3u7C6", ans);
     }
 }

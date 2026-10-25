@@ -20,9 +20,9 @@ import RMI.CharacterService;
 public class Character02_DemSoLanXuatHien1 {
     public static void main(String[] args) throws Exception {
         // a. Nhận chuỗi từ server
-        Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
+        Registry rg = LocateRegistry.getRegistry("36.50.135.242", 1099);
         CharacterService sv = (CharacterService) rg.lookup("RMICharacterService");
-        String s = sv.requestCharacter("B21DCCN564", "U5BEBBOW");
+        String s = sv.requestCharacter("B23DCCN139", "U5BEBBOW");
         System.out.println(s);
         // b. Xử lý xâu
         String res = "";
@@ -36,7 +36,7 @@ public class Character02_DemSoLanXuatHien1 {
         }
         System.out.println(res);
         // c. Gửi kết quả lại server
-        sv.submitCharacter("B21DCCN564", "U5BEBBOW", res);
+        sv.submitCharacter("B23DCCN139", "U5BEBBOW", res);
     }
 }
 

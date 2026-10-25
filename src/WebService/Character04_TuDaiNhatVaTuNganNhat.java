@@ -18,7 +18,7 @@ import vn.medianews.*;
 import java.util.*;
 public class Character04_TuDaiNhatVaTuNganNhat {
     public static void main(String[] args) throws Exception {
-        String msv = "B21DCCN005", qCode = "9n2rfqST"; 
+        String msv = "B23DCCN139", qCode = "9n2rfqST"; 
         CharacterService_Service service = new CharacterService_Service();
         CharacterService port = service.getCharacterServicePort();
         String s = port.requestString(msv, qCode);

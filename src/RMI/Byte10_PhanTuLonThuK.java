@@ -18,9 +18,9 @@ import java.util.*;
 import RMI.ByteService;
 public class Byte10_PhanTuLonThuK {
     public static void main(String[] args) throws Exception{
-        Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
+        Registry rg = LocateRegistry.getRegistry("36.50.135.242", 1099);
         ByteService sv = (ByteService) rg.lookup("RMIByteService");
-        byte[] a = sv.requestData("B21DCCN066", "uIKHCTWG");
+        byte[] a = sv.requestData("B23DCCN139", "uIKHCTWG");
         for(byte x: a) System.out.print(x + " ");  
         System.out.println();
         //b.
@@ -36,6 +36,6 @@ public class Byte10_PhanTuLonThuK {
         byte []ans = {(byte)a[a.length - k], (byte)(pos + 1)};
         for(byte x: ans) System.out.print(x + " ");
         //c.
-        sv.submitData("B21DCCN066", "uIKHCTWG", ans);
+        sv.submitData("B23DCCN139", "uIKHCTWG", ans);
     }
 }

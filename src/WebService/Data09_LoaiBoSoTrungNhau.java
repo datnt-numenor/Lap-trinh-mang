@@ -16,7 +16,7 @@ import vn.medianews.*;
 import java.util.*;
 public class Data09_LoaiBoSoTrungNhau {
     public static void main(String[] args) throws Exception{
-        String msv = "B21DCCN033", qCode = "E2Axwwf3"; 
+        String msv = "B23DCCN139", qCode = "E2Axwwf3"; 
         DataService_Service service = new DataService_Service();
         DataService port = service.getDataServicePort();
         List<Integer>a = port.getData(msv, qCode);

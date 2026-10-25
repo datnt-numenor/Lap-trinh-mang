@@ -19,7 +19,7 @@ import vn.medianews.*;
 import java.util.*;
 public class Object06_BaiToanQuanLyDonHang {
     public static void main(String[] args) throws Exception {
-        String msv = "B21DCCN008", qCode = "46WF6Fg5";
+        String msv = "B23DCCN139", qCode = "46WF6Fg5";
         ObjectService_Service service = new ObjectService_Service();
         ObjectService port = service.getObjectServicePort();
         // a. Nhận danh sách OrderY từ server

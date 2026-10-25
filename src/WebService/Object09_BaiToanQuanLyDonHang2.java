@@ -19,7 +19,7 @@ import vn.medianews.*;
 import java.util.*;
 public class Object09_BaiToanQuanLyDonHang2 {
     public static void main(String[] args) throws Exception{
-        String msv = "B21DCCN021", qCode = "CuW1L0ev"; 
+        String msv = "B23DCCN139", qCode = "CuW1L0ev"; 
         ObjectService_Service service = new ObjectService_Service();
         ObjectService port = service.getObjectServicePort();
         List<Order>a = (List<Order>)port.requestListOrder(msv, qCode);

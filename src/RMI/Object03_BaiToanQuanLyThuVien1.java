@@ -31,9 +31,9 @@ import RMI.Book;
 public class Object03_BaiToanQuanLyThuVien1 {
     public static void main(String[] args) throws Exception {
         //a. Nhận sản phẩm từ server
-        Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
+        Registry rg = LocateRegistry.getRegistry("36.50.135.242", 1099);
         ObjectService sv = (ObjectService) rg.lookup("RMIObjectService");
-        Book book = (Book) sv.requestObject("B21DCCN008", "nCOdwcKJ");
+        Book book = (Book) sv.requestObject("B23DCCN139", "nCOdwcKJ");
         System.out.println(book);
         //Tạo mã
         String code = "";
@@ -44,7 +44,7 @@ public class Object03_BaiToanQuanLyThuVien1 {
         book.setCode(code);
         System.out.println(book);
         // c. 
-        sv.submitObject("B21DCCN008", "nCOdwcKJ", book);
+        sv.submitObject("B23DCCN139", "nCOdwcKJ", book);
     }
 }
 

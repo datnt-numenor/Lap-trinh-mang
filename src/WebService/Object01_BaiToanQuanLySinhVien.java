@@ -18,7 +18,7 @@ import vn.medianews.*;
 import java.util.*;
 public class Object01_BaiToanQuanLySinhVien {
     public static void main(String[] args) throws Exception {
-        String msv = "B21DCCN001", qCode = "2RjVBzv0"; // Mã câu hỏi
+        String msv = "B23DCCN139", qCode = "2RjVBzv0"; // Mã câu hỏi
         ObjectService_Service service = new ObjectService_Service();
         ObjectService port = service.getObjectServicePort();
         List<StudentY> a = (List<StudentY>) port.requestListStudentY(msv, qCode);

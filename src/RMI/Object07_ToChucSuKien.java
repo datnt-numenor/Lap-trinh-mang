@@ -28,9 +28,9 @@ import RMI.Event;
 public class Object07_ToChucSuKien {
     public static void main(String[] args) throws Exception{
         //a.
-        Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
+        Registry rg = LocateRegistry.getRegistry("36.50.135.242", 1099);
         ObjectService sv = (ObjectService) rg.lookup("RMIObjectService");
-        Event event = (Event) sv.requestObject("B21DCCN029", "FKrGvwLM");
+        Event event = (Event) sv.requestObject("B23DCCN139", "FKrGvwLM");
         System.out.println(event);
         //b.
         String ans = "";
@@ -51,6 +51,6 @@ public class Object07_ToChucSuKien {
         event.setEventCode(ans);
         //c.
         System.out.println(event);
-        sv.submitObject("B21DCCN029", "FKrGvwLM", event);
+        sv.submitObject("B23DCCN139", "FKrGvwLM", event);
     } 
 }

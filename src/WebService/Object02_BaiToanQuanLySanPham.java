@@ -25,7 +25,7 @@ import vn.medianews.*;
 import java.util.*;
 public class Object02_BaiToanQuanLySanPham {
     public static void main(String[] args) throws Exception {
-        String msv = "B21DCCN002", qCode = "itT8hvxF"; // Mã câu hỏi
+        String msv = "B23DCCN139", qCode = "itT8hvxF"; // Mã câu hỏi
         ObjectService_Service service = new ObjectService_Service();
         ObjectService port = service.getObjectServicePort();
         ProductY product = (ProductY) port.requestProductY(msv, qCode);

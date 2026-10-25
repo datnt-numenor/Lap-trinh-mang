@@ -21,9 +21,9 @@ import java.rmi.registry.Registry;
 public class Byte07_SapXepChanLe {
     public static void main(String[] args) throws Exception{
         //a.
-        Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
+        Registry rg = LocateRegistry.getRegistry("36.50.135.242", 1099);
         ByteService sv = (ByteService) rg.lookup("RMIByteService");
-        byte[] a = sv.requestData("B21DCCN029", "A7hytb1V");
+        byte[] a = sv.requestData("B23DCCN139", "A7hytb1V");
         for(byte x: a) System.out.print(x + " ");
         System.out.println("");
         //b. sx
@@ -37,6 +37,6 @@ public class Byte07_SapXepChanLe {
         }
         for(byte x: res) System.out.print(x + " ");
         //c.
-        sv.submitData("B21DCCN028", "A7hytb1V", res);
+        sv.submitData("B23DCCN139", "A7hytb1V", res);
     }
 }

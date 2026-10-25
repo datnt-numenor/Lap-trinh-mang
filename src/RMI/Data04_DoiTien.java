@@ -20,9 +20,9 @@ import RMI.DataService;
 public class Data04_DoiTien {
     public static void main(String[] args) throws Exception {
         // a. Nhận dữ liệu
-        Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
+        Registry rg = LocateRegistry.getRegistry("36.50.135.242", 1099);
         DataService sv = (DataService) rg.lookup("RMIDataService");
-        int n = (int) sv.requestData("B21DCCN012", "Iz06p8Zw"), res = 0;
+        int n = (int) sv.requestData("B23DCCN139", "Iz06p8Zw"), res = 0;
         System.out.println(n);
         // b. Xử lý: Tìm số đồng tiền
         String ans = "";
@@ -42,7 +42,7 @@ public class Data04_DoiTien {
         }
         System.out.println(ans);
         // c. Gửi kết quả
-        sv.submitData("B21DCCN012", "Iz06p8Zw", ans);
+        sv.submitData("B23DCCN139", "Iz06p8Zw", ans);
     }
 }
 

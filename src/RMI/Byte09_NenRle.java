@@ -19,9 +19,9 @@ import java.rmi.registry.*;
 import RMI.ByteService;
 public class Byte09_NenRle {
     public static void main(String[] args) throws Exception{
-        Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
+        Registry rg = LocateRegistry.getRegistry("36.50.135.242", 1099);
         ByteService sv = (ByteService) rg.lookup("RMIByteService");
-        byte[] a = sv.requestData("B21DCCN036", "2uG0lQGi");
+        byte[] a = sv.requestData("B23DCCN139", "2uG0lQGi");
         for (byte x : a) System.out.print(x + " ");
         System.out.println();
         // b. 
@@ -40,6 +40,6 @@ public class Byte09_NenRle {
         int idx = 0;
         for(byte x: res) ans[idx++] = x;
         for(byte x: ans) System.out.print(x + " ");
-        sv.submitData("B21DCCN036", "2uG0lQGi", ans);        
+        sv.submitData("B23DCCN139", "2uG0lQGi", ans);        
     }
 }

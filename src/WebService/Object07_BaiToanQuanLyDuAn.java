@@ -21,7 +21,7 @@ import vn.medianews.*;
 import java.util.*;
 public class Object07_BaiToanQuanLyDuAn {
     public static void main(String[] args) throws Exception {
-        String msv = "B21DCCN010", qCode = "R6UOuyyE";
+        String msv = "B23DCCN139", qCode = "R6UOuyyE";
         ObjectService_Service service = new ObjectService_Service();
         ObjectService port = service.getObjectServicePort();
         List<Project>a = (List<Project>)port.requestListProject(msv, qCode);

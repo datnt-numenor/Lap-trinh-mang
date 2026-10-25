@@ -26,9 +26,9 @@ import RMI.ByteService;
 public class Byte03_ChuyenDoiHeBatPhan {
     public static void main(String[] args) throws Exception {
         // a. Nhận dữ liệu từ server
-        Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
+        Registry rg = LocateRegistry.getRegistry("36.50.135.242", 1099);
         ByteService sv = (ByteService) rg.lookup("RMIByteService");
-        byte[] a = sv.requestData("B21DCCN008", "HhPAxeDw");
+        byte[] a = sv.requestData("B23DCCN139", "HhPAxeDw");
         for (byte x : a) System.out.print(x + " ");
         System.out.println();
         // b. Chuyển đổi mảng byte thành chuỗi bát phân
@@ -36,7 +36,7 @@ public class Byte03_ChuyenDoiHeBatPhan {
         for (byte x : a) res+=String.format("%03o", x & 0xFF);
         System.out.println(res);
         byte[] ans = res.toString().getBytes();
-        sv.submitData("B21DCCN008", "HhPAxeDw", ans);
+        sv.submitData("B23DCCN139", "HhPAxeDw", ans);
     }
 }
 

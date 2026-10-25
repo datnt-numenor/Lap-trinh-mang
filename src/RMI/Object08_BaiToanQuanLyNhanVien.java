@@ -25,9 +25,9 @@ import RMI.Employee;
 public class Object08_BaiToanQuanLyNhanVien {
     public static void main(String[] args) throws Exception{
         //a.
-        Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
+        Registry rg = LocateRegistry.getRegistry("36.50.135.242", 1099);
         ObjectService sv = (ObjectService) rg.lookup("RMIObjectService");
-        Employee employee = (Employee) sv.requestObject("B21DCCN038", "7fSWnlHB");
+        Employee employee = (Employee) sv.requestObject("B23DCCN139", "7fSWnlHB");
         System.out.println(employee);
         //b.tổng cs
         int tongCS = 0, x = employee.getExperienceYears(), y = employee.getExperienceYears();
@@ -47,6 +47,6 @@ public class Object08_BaiToanQuanLyNhanVien {
         employee.setFinalSalary(Final);
         System.out.println(employee);
         //c.
-        sv.submitObject("B21DCCN038", "7fSWnlHB", employee);
+        sv.submitObject("B23DCCN139", "7fSWnlHB", employee);
     }
 }

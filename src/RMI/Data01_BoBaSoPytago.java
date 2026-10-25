@@ -17,9 +17,9 @@ import RMI.DataService;
 public class Data01_BoBaSoPytago {
     public static void main(String[] args) throws Exception {
         // a. Nhận dữ liệu
-        Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
+        Registry rg = LocateRegistry.getRegistry("36.50.135.242", 1099);
         DataService sv = (DataService) rg.lookup("RMIDataService");
-        int N = (int) sv.requestData("B21DCCN319", "NMATI6Zw");
+        int N = (int) sv.requestData("B23DCCN139", "NMATI6Zw");
         System.out.println(N);
         // b. Xử lý: Tìm danh sách các bộ ba số Pythagore
         List<List<Integer>> res = new ArrayList<>();
@@ -36,6 +36,6 @@ public class Data01_BoBaSoPytago {
         }
         System.out.println(res);
         // c. Gửi kết quả
-        sv.submitData("B21DCCN319", "NMATI6Zw", res);
+        sv.submitData("B23DCCN139", "NMATI6Zw", res);
     }
 }

@@ -4,7 +4,7 @@
 
 Một hệ thống hỗ trợ các sản phẩm khuyến mãi cho sinh viên gồm 2 thành phần như sau:
 
-a. WebService triển khai tại địa chỉ [http://203.162.10.109:8080/ProductService](http://203.162.10.109:8080/ProductService) /ProductS?wsdl cung cấp chức năng cho phép client nhận thông tin sản phẩm khuyến mãi (getProduct) và đặt hàng (Order)
+a. WebService triển khai tại địa chỉ [http://36.50.135.242:8080/ProductService](http://36.50.135.242:8080/ProductService) /ProductS?wsdl cung cấp chức năng cho phép client nhận thông tin sản phẩm khuyến mãi (getProduct) và đặt hàng (Order)
 b. UDP Server cung cấp chức năng cho phép client lấy thông tin khuyến mãi theo mã sản phẩm
 Viết chương trình client giao tiếp theo kịch bản sau:
 
@@ -17,7 +17,7 @@ d. Kết thúc chương trình
 // LƯU Ý: đề không cho tên lớp/field của WebService ProductS nên các tên dưới đây là GIẢ ĐỊNH
 // theo quy ước wsimport (ProductS_Service, getProductSPort, Product.getId/getCode/setDiscount, order).
 // Sinh stub bằng NetBeans "Web Service Client" từ
-// http://203.162.10.109:8080/ProductService/ProductS?wsdl rồi sửa import/tên cho khớp.
+// http://36.50.135.242:8080/ProductService/ProductS?wsdl rồi sửa import/tên cho khớp.
 package WebService;
 import java.net.*;
 import productservice.*; // GIẢ ĐỊNH: đổi thành package stub thực tế
@@ -31,7 +31,7 @@ public class Object11_KhuyenMaiSanPham {
         System.out.println(p.getId() + ";" + p.getCode());
         // b. Gửi "id;code" tới UDP server (cổng 2208) để nhận mã giảm giá ngẫu nhiên
         DatagramSocket socket = new DatagramSocket();
-        InetAddress sA = InetAddress.getByName("203.162.10.109");
+        InetAddress sA = InetAddress.getByName("36.50.135.242");
         byte[] req = (p.getId() + ";" + p.getCode()).getBytes();
         socket.send(new DatagramPacket(req, req.length, sA, 2208));
         DatagramPacket nhan = new DatagramPacket(new byte[4096], 4096);

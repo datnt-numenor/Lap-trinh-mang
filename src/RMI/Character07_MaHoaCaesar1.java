@@ -20,9 +20,9 @@ import java.util.*;
 import RMI.CharacterService;
 public class Character07_MaHoaCaesar1 {
     public static void main(String[] args) throws Exception{
-        Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
+        Registry rg = LocateRegistry.getRegistry("36.50.135.242", 1099);
         CharacterService sv = (CharacterService) rg.lookup("RMICharacterService");
-        String s = sv.requestCharacter("B21DCCN022", "j4rStb2a");
+        String s = sv.requestCharacter("B23DCCN139", "j4rStb2a");
         System.out.println(s);
         //b.
         String ans = "";
@@ -34,6 +34,6 @@ public class Character07_MaHoaCaesar1 {
         }
         System.out.println(ans);
         //c.
-        sv.submitCharacter("B21DCCN022", "j4rStb2a", ans);
+        sv.submitCharacter("B23DCCN139", "j4rStb2a", ans);
     }
 }

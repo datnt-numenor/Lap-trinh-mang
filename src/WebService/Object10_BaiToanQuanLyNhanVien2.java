@@ -20,7 +20,7 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 public class Object10_BaiToanQuanLyNhanVien2 {
     public static void main(String[] args) throws Exception{
-        String msv = "B21DCCN084", qCode = "L8CainEX"; 
+        String msv = "B23DCCN139", qCode = "L8CainEX"; 
         ObjectService_Service service = new ObjectService_Service();
         ObjectService port = service.getObjectServicePort();
         Employee e = port.requestEmployee(msv, qCode);

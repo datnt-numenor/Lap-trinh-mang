@@ -19,7 +19,7 @@ import vn.medianews.*;
 import java.util.*;
 public class Character01_SapXepChuoiTheoSoNguyenAm {
     public static void main(String[] args) throws Exception {
-        String msv = "B21DCCN001", qCode = "mDN1MFUJ";
+        String msv = "B23DCCN139", qCode = "mDN1MFUJ";
         CharacterService_Service service = new CharacterService_Service();
         CharacterService port = service.getCharacterServicePort();
         // a. Nhận mảng chuỗi từ server

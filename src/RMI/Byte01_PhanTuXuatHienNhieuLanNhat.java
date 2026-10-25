@@ -18,9 +18,9 @@ import RMI.ByteService;
 public class Byte01_PhanTuXuatHienNhieuLanNhat {
     public static void main(String[] args) throws Exception {
         // a. Nhận dữ liệu từ server
-        Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
+        Registry rg = LocateRegistry.getRegistry("36.50.135.242", 1099);
         ByteService sv = (ByteService) rg.lookup("RMIByteService");
-        byte[] a = sv.requestData("B21DCCN319", "1mPMIkGJ");
+        byte[] a = sv.requestData("B23DCCN139", "1mPMIkGJ");
         for(byte x: a) System.out.print(x + " ");
         System.out.println("");
         //b. Đếm
@@ -37,6 +37,6 @@ public class Byte01_PhanTuXuatHienNhieuLanNhat {
         System.out.println(ptuMax + " " + slMax);
         // c. Gửi
         byte[] res = {ptuMax, (byte) slMax};
-        sv.submitData("B21DCCN319", "1mPMIkGJ", res);
+        sv.submitData("B23DCCN139", "1mPMIkGJ", res);
     }
 }

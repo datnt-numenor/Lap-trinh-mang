@@ -14,7 +14,7 @@ import vn.medianews.*;
 import java.util.*;
 public class Data11_SapXepChanLe {
     public static void main(String[] args) throws Exception{
-        String msv = "B21DCCN088", qCode = "0BEtJAT9"; 
+        String msv = "B23DCCN139", qCode = "0BEtJAT9"; 
         DataService_Service service = new DataService_Service();
         DataService port = service.getDataServicePort();
         List<Integer>a = port.getData(msv, qCode);

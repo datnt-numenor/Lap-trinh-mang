@@ -18,9 +18,9 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 public class Data08_PhanTichRaThuaSoNguyenTo {
     public static void main(String[] args) throws Exception{
-        Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
+        Registry rg = LocateRegistry.getRegistry("36.50.135.242", 1099);
         DataService sv = (DataService) rg.lookup("RMIDataService");
-        int n = (int) sv.requestData("B21DCCN022", "zzmmquoc");
+        int n = (int) sv.requestData("B23DCCN139", "zzmmquoc");
         System.out.println(n);
         List<Integer>a = new ArrayList<>();
         for(int i = 2;i*i<=n;i++){
@@ -31,6 +31,6 @@ public class Data08_PhanTichRaThuaSoNguyenTo {
         }
         if(n>1) a.add(n);
         System.out.println(a);
-        sv.submitData("B21DCCN022", "zzmmquoc", a);
+        sv.submitData("B23DCCN139", "zzmmquoc", a);
     }
 }

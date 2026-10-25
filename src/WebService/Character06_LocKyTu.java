@@ -18,7 +18,7 @@ import java.util.*;
 public class Character06_LocKyTu {
     public static void main(String[] args) throws Exception {
         // Cấu hình thông tin
-        String msv = "B21DCCN008", qCode = "rT6Ql5GH"; 
+        String msv = "B23DCCN139", qCode = "rT6Ql5GH"; 
         // Tạo đối tượng dịch vụ từ web service
         CharacterService_Service service = new CharacterService_Service();
         CharacterService port = service.getCharacterServicePort();

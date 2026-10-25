@@ -20,9 +20,9 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 public class Character09_ChuyenDoiThapPhanLaMa {
     public static void main(String[] args)throws Exception{
-        Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
+        Registry rg = LocateRegistry.getRegistry("36.50.135.242", 1099);
         CharacterService sv = (CharacterService) rg.lookup("RMICharacterService");
-        String s = sv.requestCharacter("B21DCCN032", "ADu6zRYE");
+        String s = sv.requestCharacter("B23DCCN139", "ADu6zRYE");
         System.out.println(s);
         //b.
         String rm = "";
@@ -37,6 +37,6 @@ public class Character09_ChuyenDoiThapPhanLaMa {
         }
         System.out.println(rm);     
         //c.
-        sv.submitCharacter("B21DCCN032", "ADu6zRYE", rm);
+        sv.submitCharacter("B23DCCN139", "ADu6zRYE", rm);
     }
 }

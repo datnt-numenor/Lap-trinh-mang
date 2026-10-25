@@ -22,7 +22,7 @@ public class Data06_ChuyenDoiSoThapPhanSangPhanSo {
         return a;
     }
     public static void main(String[] args) throws Exception{
-        String msv = "B21DCCN011", qCode = "ny8Fb8BU"; 
+        String msv = "B23DCCN139", qCode = "ny8Fb8BU"; 
         DataService_Service service = new DataService_Service();
         DataService port = service.getDataServicePort();
         double a = port.getDataDouble(msv, qCode);

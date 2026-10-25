@@ -22,9 +22,9 @@ import java.util.Base64;
 public class Byte05_GiaiMa {
     public static void main(String[] args) throws Exception{
         // a. Nhận dữ liệu từ server
-        Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
+        Registry rg = LocateRegistry.getRegistry("36.50.135.242", 1099);
         ByteService sv = (ByteService) rg.lookup("RMIByteService");
-        byte[] a = sv.requestData("B21DCCN015", "oeJljCIf");
+        byte[] a = sv.requestData("B23DCCN139", "oeJljCIf");
         // b. Giải mã 
         String s = new String(a);  //Byte -->String
         System.out.println(s);
@@ -32,7 +32,7 @@ public class Byte05_GiaiMa {
         for (byte x: ans) System.out.print(x + " ");
         System.out.println();
         // c. 
-        sv.submitData("B21DCCN015", "oeJljCIf", ans);
+        sv.submitData("B23DCCN139", "oeJljCIf", ans);
     }
 }
 

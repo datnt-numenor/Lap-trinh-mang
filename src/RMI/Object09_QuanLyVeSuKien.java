@@ -28,9 +28,9 @@ import RMI.Ticket;
 import java.util.*;
 public class Object09_QuanLyVeSuKien {
     public static void main(String[] args) throws Exception{
-        Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
+        Registry rg = LocateRegistry.getRegistry("36.50.135.242", 1099);
         ObjectService sv = (ObjectService) rg.lookup("RMIObjectService");
-        Ticket ticket = (Ticket) sv.requestObject("B21DCCN048", "Uct8bABt");
+        Ticket ticket = (Ticket) sv.requestObject("B23DCCN139", "Uct8bABt");
         //Ticket ticket = new Ticket(1, "Charity Concert", "15/06/2024");
         System.out.println(ticket);
         //Lấy tên
@@ -62,7 +62,7 @@ public class Object09_QuanLyVeSuKien {
         ticket.setTicketCode(res);
         System.out.println(ticket);
         //c.
-        sv.submitObject("B21DCCN048", "Uct8bABt", ticket);
+        sv.submitObject("B23DCCN139", "Uct8bABt", ticket);
     }
 }
 

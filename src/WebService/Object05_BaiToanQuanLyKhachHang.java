@@ -16,7 +16,7 @@ import java.time.temporal.ChronoUnit;
 import vn.medianews.*;
 public class Object05_BaiToanQuanLyKhachHang {
     public static void main(String[] args) throws Exception {
-        String msv = "B21DCCN005", qCode = "aYiLQ3wo";
+        String msv = "B23DCCN139", qCode = "aYiLQ3wo";
         ObjectService_Service service = new ObjectService_Service();
         ObjectService port = service.getObjectServicePort();
         List<CustomerY> cus = (List<CustomerY>) port.requestListCustomerY(msv, qCode);

@@ -25,9 +25,9 @@ import java.rmi.registry.*;
 import RMI.ObjectService;
 public class Object05_BaiToanQuanLyHeThongThuongMaiDienTu {
     public static void main(String[] args) throws Exception{
-        Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
+        Registry rg = LocateRegistry.getRegistry("36.50.135.242", 1099);
         ObjectService sv = (ObjectService) rg.lookup("RMIObjectService");
-        Order order = (Order) sv.requestObject("B21DCCN021", "vLJWvWpf");
+        Order order = (Order) sv.requestObject("B23DCCN139", "vLJWvWpf");
         System.out.println(order);
         //b.
         String x = order.getShippingType().substring(0, 2).toUpperCase(); // Hai ký tự đầu của shippingType
@@ -37,7 +37,7 @@ public class Object05_BaiToanQuanLyHeThongThuongMaiDienTu {
         order.setOrderCode(orderCode);
         //c
         System.out.println(order);
-        sv.submitObject("B21DCCN021", "vLJWvWpf", order);
+        sv.submitObject("B23DCCN139", "vLJWvWpf", order);
     }
 }
 

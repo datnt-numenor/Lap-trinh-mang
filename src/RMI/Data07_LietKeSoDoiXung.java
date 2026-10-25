@@ -29,9 +29,9 @@ public class Data07_LietKeSoDoiXung {
         return true;
     }
     public static void main(String[] args) throws Exception{
-        Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
+        Registry rg = LocateRegistry.getRegistry("36.50.135.242", 1099);
         DataService sv = (DataService) rg.lookup("RMIDataService");
-        String s = (String) sv.requestData("B21DCCN021", "t3cBY2uk");
+        String s = (String) sv.requestData("B23DCCN139", "t3cBY2uk");
         System.out.println(s);
         s = s.replace(";", "");
         String []tmp = s.trim().split("\\s+");
@@ -41,6 +41,6 @@ public class Data07_LietKeSoDoiXung {
             if(check(i)) a.add(i);
         }
         System.out.println(a);
-        sv.submitData("B21DCCN021", "t3cBY2uk", a);
+        sv.submitData("B23DCCN139", "t3cBY2uk", a);
     }
 }

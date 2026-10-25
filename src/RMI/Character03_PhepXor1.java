@@ -19,9 +19,9 @@ import java.rmi.registry.Registry;
 public class Character03_PhepXor1 {
     public static void main(String[] args) throws Exception{
         // a. 
-        Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
+        Registry rg = LocateRegistry.getRegistry("36.50.135.242", 1099);
         CharacterService sv = (CharacterService) rg.lookup("RMICharacterService");
-        String s = sv.requestCharacter("B21DCCN008", "Xidb0Thk");
+        String s = sv.requestCharacter("B23DCCN139", "Xidb0Thk");
         System.out.println(s);
         // b. Xử lý xâu
         String []tmp = s.split(";");
@@ -29,7 +29,7 @@ public class Character03_PhepXor1 {
         for(int i = 0;i<inp.length();i++) res+=(char)(inp.charAt(i) ^ xorKey.charAt(i % xorKey.length()));
         System.out.println(res);
         // c. Gửi kết quả lại server
-        sv.submitCharacter("B21DCCN008", "Xidb0Thk", res);
+        sv.submitCharacter("B23DCCN139", "Xidb0Thk", res);
     }
 }
 

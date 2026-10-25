@@ -23,9 +23,9 @@ import RMI.ByteService;
 public class Byte04_PhepXor2 {
     public static void main(String[] args) throws Exception {
         // a. Nhận dữ liệu từ server
-        Registry rg = LocateRegistry.getRegistry("203.162.10.109", 1099);
+        Registry rg = LocateRegistry.getRegistry("36.50.135.242", 1099);
         ByteService sv = (ByteService) rg.lookup("RMIByteService");
-        byte[] a = sv.requestData("B21DCCN012", "4BraNTI5");
+        byte[] a = sv.requestData("B23DCCN139", "4BraNTI5");
         for(byte x: a) System.out.print(x + " ");
         System.out.println();
         //b. Mã hoá
@@ -35,6 +35,6 @@ public class Byte04_PhepXor2 {
         for(int i = 0;i<a.length;i++) maHoa[i] = (byte) (a[i] ^ tmpB[i % tmpB.length]);
         for(byte x: maHoa) System.out.print(x + " ");
         //c. Gửi
-        sv.submitData("B21DCCN012", "4BraNTI5", maHoa);
+        sv.submitData("B23DCCN139", "4BraNTI5", maHoa);
     }
 }
