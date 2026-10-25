@@ -1,0 +1,28 @@
+/* ===== ĐỀ SỐ 16 [B21DCCN082] - BÀI 1 TỔNG CÁC SỐ TRONG MẢNG | qCode: hnVAHv3I ===== */
+/*
+BÀI 1. TỔNG CÁC SỐ TRONG MẢNG
+
+[Mã câu hỏi (qCode): hnVAHv3I]. Một dịch vụ web được định nghĩa và mô tả trong tệp DataService?wsdl, được triển khai trên server tại URL http://<Exam_IP>:8080/JNPWS/DataService?wsdl để xử lý các bài toán với dữ liệu nguyên thủy. Yêu cầu: Viết chương trình tại máy trạm (WS client) để giao tiếp với DataService thực hiện các công việc sau:
+
+a. Triệu gọi phương thức getData với tham số đầu vào là mã sinh viên (studentCode) và mã câu hỏi (qCode) để nhận về một mảng số nguyên (List<Integer>) từ server.
+b. Thực hiện tính toán tổng của tất cả các phần tử trong mảng số nguyên nhận được.
+c. Triệu gọi phương thức submitDataInt(String studentCode, String qCode, int data) để gửi kết quả tổng đã tính được trở lại server. Ví dụ: Nếu mảng số nguyên nhận được từ phương thức getData là [1, 2, 3, 4, 5], chương trình client sẽ tính tổng là 15 và gửi kết quả này trở lại server qua phương thức submitData
+d. Kết thúc chương trình client.
+*/
+package WebService.B21DCCN082;
+import vn.medianews.*;
+import java.util.*;
+public class TongCacSo {
+    public static void main(String[] args) throws Exception{
+        String msv = "B21DCCN082", qCode = "hnVAHv3I"; 
+        DataService_Service service = new DataService_Service();
+        DataService port = service.getDataServicePort();
+        List<Integer>a = port.getData(msv, qCode);
+        System.out.println(a);
+        int tong = 0;
+        for(int x: a) tong+=x;
+        System.out.println(tong);
+        port.submitDataInt(msv, qCode, tong);
+    }
+}
+
