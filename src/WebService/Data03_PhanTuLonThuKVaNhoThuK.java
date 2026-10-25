@@ -2,7 +2,7 @@
 /*
 BÀI 1. PHẦN TỬ LỚN THỨ K VÀ NHỎ THỨ K
 
-[Mã câu hỏi (qCode): WpaUTFMu]. Một dịch vụ web được định nghĩa và mô tả trong tệp DataService?wsdl, được triển khai trên server tại URL http://<Exam_IP>:8080/JNPWS/DataService?wsdl để xử lý các bài toán với dữ liệu nguyên thủy. Yêu cầu: Viết chương trình tại máy trạm (WS client) để giao tiếp với DataService thực hiện các công việc sau:
+[Mã câu hỏi (qCode): WpaUTFMu]. Một dịch vụ web được định nghĩa và mô tả trong tệp DataService?wsdl, được triển khai trên server tại URL http://<Exam_IP>:2221/DataService?wsdl để xử lý các bài toán với dữ liệu nguyên thủy. Yêu cầu: Viết chương trình tại máy trạm (WS client) để giao tiếp với DataService thực hiện các công việc sau:
 
 a. Triệu gọi phương thức getData với tham số đầu vào là mã sinh viên (studentCode) và mã câu hỏi (qCode) để nhận về một mảng số nguyên (List<Integer>) từ server. Phần tử đầu tiên của mảng này là giá trị K.
 b. Với mảng số nguyên nhận được, sử dụng giá trị K (phần tử đầu tiên của mảng) để xác định phần tử lớn thứ K và nhỏ thứ K trong các phần tử còn lại của mảng (loại bỏ phần tử đầu tiên khi tính toán).

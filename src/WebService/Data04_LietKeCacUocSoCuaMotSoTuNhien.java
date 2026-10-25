@@ -2,7 +2,7 @@
 /*
 BÀI 1. LIỆT KÊ CÁC ƯỚC SỐ CỦA MỘT SỐ TỰ NHIÊN
 
-[Mã câu hỏi (qCode): nhFjYg0F]. Một dịch vụ web được định nghĩa và mô tả trong tệp DataService?wsdl, được triển khai trên server tại URL http://<Exam_IP>:8080/JNPWS/DataService?wsdl để xử lý các bài toán với dữ liệu nguyên thủy. Yêu cầu: Viết chương trình tại máy trạm (WS client) để giao tiếp với DataService thực hiện các công việc sau:
+[Mã câu hỏi (qCode): nhFjYg0F]. Một dịch vụ web được định nghĩa và mô tả trong tệp DataService?wsdl, được triển khai trên server tại URL http://<Exam_IP>:2221/DataService?wsdl để xử lý các bài toán với dữ liệu nguyên thủy. Yêu cầu: Viết chương trình tại máy trạm (WS client) để giao tiếp với DataService thực hiện các công việc sau:
 
 a. Triệu gọi phương thức getDataDouble với tham số đầu vào là mã sinh viên (studentCode) và mã câu hỏi (qCode) để nhận về một số thập phân (double) từ server.
 b. Lấy phần nguyên của số thập phân nhận được. Liệt kê tất cả các ước số của phần nguyên này và đếm số lượng ước số. Kết quả sẽ là một danh sách số nguyên, trong đó phần tử đầu tiên là số

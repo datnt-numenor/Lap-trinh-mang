@@ -2,7 +2,7 @@
 /*
 BÀI 2. BÀI TOÁN QUẢN LÝ ĐƠN HÀNG
 
-[Mã câu hỏi (qCode): 46WF6Fg5]. Một dịch vụ web được định nghĩa và mô tả trong tệp ObjectService.wsdl, được triển khai trên server tại URL http://<Exam_IP>:8080/JNPWS/ObjectService?wsdl để xử lý các bài toán với đối tượng. Yêu cầu: Viết chương trình tại máy trạm (WS client) để giao tiếp với ObjectService thực hiện các công việc sau:
+[Mã câu hỏi (qCode): 46WF6Fg5]. Một dịch vụ web được định nghĩa và mô tả trong tệp ObjectService.wsdl, được triển khai trên server tại URL http://<Exam_IP>:2221/ObjectService?wsdl để xử lý các bài toán với đối tượng. Yêu cầu: Viết chương trình tại máy trạm (WS client) để giao tiếp với ObjectService thực hiện các công việc sau:
 
 a. Triệu gọi phương thức requestListOrderY với tham số đầu vào là mã sinh viên (studentCode) và mã câu hỏi (qCode) để nhận về danh sách đối tượng OrderY từ server. Mỗi đối tượng OrderY có các thuộc tính:
 - orderId: kiểu String, đại diện cho mã đơn hàng.

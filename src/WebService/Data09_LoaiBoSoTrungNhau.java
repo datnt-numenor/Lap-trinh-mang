@@ -2,7 +2,7 @@
 /*
 BÀI 1. LOẠI BỎ SỐ TRÙNG NHAU
 
-[Mã câu hỏi (qCode): E2Axwwf3]. Một dịch vụ web được định nghĩa và mô tả trong tệp DataService?wsdl, được triển khai trên server tại URL http://<Exam_IP>:8080/JNPWS/DataService?wsdl để xử lý các bài toán với dữ liệu nguyên thủy. Trang 12
+[Mã câu hỏi (qCode): E2Axwwf3]. Một dịch vụ web được định nghĩa và mô tả trong tệp DataService?wsdl, được triển khai trên server tại URL http://<Exam_IP>:2221/DataService?wsdl để xử lý các bài toán với dữ liệu nguyên thủy. Trang 12
 
 Yêu cầu: Viết chương trình tại máy trạm (WS client) để giao tiếp với DataService thực hiện các công việc sau:
 

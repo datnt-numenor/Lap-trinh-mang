@@ -2,7 +2,7 @@
 /*
 BÀI 1. XOAY VÒNG KÝ TỰ
 
-[Mã câu hỏi (qCode): YDcPHFgN]. Một dịch vụ web được định nghĩa và mô tả trong tệp CharacterService.wsdl, được triển khai trên server tại URL http://<Exam_IP>:8080/JNPWS/CharacterService?wsdl để xử lý các bài toán về chuỗi và ký tự. Yêu cầu: Viết chương trình tại máy trạm (WS client) để giao tiếp với CharacterService thực hiện các công việc sau:
+[Mã câu hỏi (qCode): YDcPHFgN]. Một dịch vụ web được định nghĩa và mô tả trong tệp CharacterService.wsdl, được triển khai trên server tại URL http://<Exam_IP>:2221/CharacterService?wsdl để xử lý các bài toán về chuỗi và ký tự. Yêu cầu: Viết chương trình tại máy trạm (WS client) để giao tiếp với CharacterService thực hiện các công việc sau:
 
 a. Triệu gọi phương thức requestCharacter với tham số đầu vào là mã sinh viên (studentCode) và mã câu hỏi (qCode) để nhận về một mảng ký tự (List<Character>) từ server.
 b. Thực hiện xoay vòng các ký tự trong mảng theo chiều phải, số lần xoay vòng bằng đúng kích thước của mảng ký tự đã nhận được.

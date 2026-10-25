@@ -1,6 +1,6 @@
 /* ===== ĐỀ SỐ 1 [B21DCCN001] - BÀI 2 SẮP XẾP CHUỖI THEO SỐ NGUYÊN ÂM | qCode: mDN1MFUJ ===== */
 /*
-BÀI 2. SẮP XẾP CHUỖI THEO SỐ NGUYÊN ÂM [Mã câu hỏi (qCode): mDN1MFUJ]. Một dịch vụ web được định nghĩa và mô tả trong tệp CharacterService.wsdl, được triển khai trên server tại URL http://<Exam_IP>:8080/JNPWS/CharacterService?wsdl để xử lý các bài toán về chuỗi và ký tự. Yêu cầu: Viết chương trình tại máy trạm (WS client) để giao tiếp với CharacterService thực hiện các công việc sau:
+BÀI 2. SẮP XẾP CHUỖI THEO SỐ NGUYÊN ÂM [Mã câu hỏi (qCode): mDN1MFUJ]. Một dịch vụ web được định nghĩa và mô tả trong tệp CharacterService.wsdl, được triển khai trên server tại URL http://<Exam_IP>:2221/CharacterService?wsdl để xử lý các bài toán về chuỗi và ký tự. Yêu cầu: Viết chương trình tại máy trạm (WS client) để giao tiếp với CharacterService thực hiện các công việc sau:
 a. Triệu gọi phương thức requestStringArray với tham số đầu vào là mã sinh viên (studentCode) và mã câu hỏi (qCode) để nhận về một mảng chuỗi (List<String>) từ server.
 b. Sắp xếp các chuỗi trong mảng theo số lượng nguyên âm tăng dần. Nếu hai chuỗi có cùng số lượng nguyên âm, giữ nguyên thứ tự xuất hiện ban đầu của chúng trong mảng.
 c. Triệu gọi phương thức submitCharacterStringArray(String studentCode, String qCode, List<String> data) để gửi mảng chuỗi đã sắp xếp trở lại server. Ví dụ: Nếu mảng chuỗi nhận được từ phương thức requestCharacter là ["apple", "kiwi", "banana", "pear"], số lượng nguyên âm trong các từ là:
