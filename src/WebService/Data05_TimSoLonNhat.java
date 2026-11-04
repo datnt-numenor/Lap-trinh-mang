@@ -17,15 +17,19 @@ import ptit.dblab.judge.network.server.soap.*;
 import java.util.*;
 public class Data05_TimSoLonNhat {
     public static void main(String[] args) throws Exception{
-        String msv = "B23DCCN139", qCode = "RiRH8wfk"; 
+        String msv = "B23DCCN139", qCode = "C7i6BQY9";
         DataService service = new DataService();
         SoapDataService port = service.getSoapDataServicePort();
-        List<Integer>a = port.getData(msv, qCode);
-        List<String>a1 = new java.util.ArrayList<>();
-        for(int x: a) a1.add(x + "");
-        Collections.sort(a1);
-        String ans = "";
-        for(String x: a1) ans+=x+ans;
-        port.submitDataString(msv, qCode, ans);
+        List<Integer> a = port.getData(msv, qCode);
+        List<String> a1 = new ArrayList<>();
+        for (int x : a) a1.add(String.valueOf(x));
+        // x đứng trước y nếu ghép x+y lớn hơn y+x (so sánh chuỗi cùng độ dài nên so theo từ điển là đúng)
+        Collections.sort(a1, (x, y) -> (y + x).compareTo(x + y));
+        StringBuilder ans = new StringBuilder();
+        for (String x : a1) ans.append(x);
+        // Trường hợp toàn số 0 thì kết quả là "0"
+        String res = ans.charAt(0) == '0' ? "0" : ans.toString();
+        System.out.println(res);
+        port.submitDataString(msv, qCode, res);
     }
 }
