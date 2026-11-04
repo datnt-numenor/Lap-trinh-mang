@@ -15,13 +15,13 @@ d. Kết thúc chương trình client.
 */
 // Đáp án bổ sung (không có trong repo gốc), chưa kiểm chứng với server thật.
 package WebService;
-import vn.medianews.*;
+import ptit.dblab.judge.network.server.soap.*;
 import java.util.*;
 public class Object06_BaiToanQuanLyDonHang {
     public static void main(String[] args) throws Exception {
         String msv = "B23DCCN139", qCode = "46WF6Fg5";
-        ObjectService_Service service = new ObjectService_Service();
-        ObjectService port = service.getObjectServicePort();
+        ObjectService service = new ObjectService();
+        SoapObjectService port = service.getSoapObjectServicePort();
         // a. Nhận danh sách OrderY từ server
         List<OrderY> a = port.requestListOrderY(msv, qCode);
         // b. Giữ đơn "pending" hoặc "processing" có orderDate trong 30 ngày gần nhất

@@ -7,15 +7,16 @@ c. Triệu gọi submitListEmployeeY(String studentCode, String qCode, List<Empl
 d. Kết thúc chương trình client.
 */
 // Bài lấy từ hệ thống DB-Lab (Exam Server 36.50.135.242), chưa chạy thử với server thật.
-// Stub (package vn.medianews) cần sinh lại từ WSDL của đề (cổng 2221); tên lớp/phương thức theo đúng đề, nếu stub sinh ra khác thì sửa lại cho khớp.
+// Stub: sinh từ WSDL (cổng 2221) bằng New > Web Service Client (package ptit.dblab.judge.network.server.soap), rồi kéo vào Source Packages.
+// Tên lớp/getter theo quy luật của DataService (đã chạy AC); với Character/Object là suy luận, nếu khác thì sửa theo stub sinh ra.
 package WebService;
-import vn.medianews.*;
+import ptit.dblab.judge.network.server.soap.*;
 import java.util.*;
 public class Object12_SapXepNhanVienTheoThamNien {
     public static void main(String[] args) throws Exception {
         String msv = "B23DCCN139", qCode = "Ss4mjFa9";
-        ObjectService_Service service = new ObjectService_Service();
-        ObjectService port = service.getObjectServicePort();
+        ObjectService service = new ObjectService();
+        SoapObjectService port = service.getSoapObjectServicePort();
         List<EmployeeY> a = new ArrayList<>(port.requestListEmployeeY(msv, qCode));
         // Collections.sort ổn định: cùng ngày giữ nguyên thứ tự ban đầu
         Collections.sort(a, (x, y) -> Long.compare(

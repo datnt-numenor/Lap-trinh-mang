@@ -7,15 +7,16 @@ c. Triệu gọi submitListCustomer(String studentCode, String qCode, List<Custo
 d. Kết thúc chương trình client.
 */
 // Bài lấy từ hệ thống DB-Lab (Exam Server 36.50.135.242), chưa chạy thử với server thật.
-// Stub (package vn.medianews) cần sinh lại từ WSDL của đề (cổng 2221); tên lớp/phương thức theo đúng đề, nếu stub sinh ra khác thì sửa lại cho khớp.
+// Stub: sinh từ WSDL (cổng 2221) bằng New > Web Service Client (package ptit.dblab.judge.network.server.soap), rồi kéo vào Source Packages.
+// Tên lớp/getter theo quy luật của DataService (đã chạy AC); với Character/Object là suy luận, nếu khác thì sửa theo stub sinh ra.
 package WebService;
-import vn.medianews.*;
+import ptit.dblab.judge.network.server.soap.*;
 import java.util.*;
 public class Object13_LocKhachHangTiemNang {
     public static void main(String[] args) throws Exception {
         String msv = "B23DCCN139", qCode = "jxSi7OEM";
-        ObjectService_Service service = new ObjectService_Service();
-        ObjectService port = service.getObjectServicePort();
+        ObjectService service = new ObjectService();
+        SoapObjectService port = service.getSoapObjectServicePort();
         List<Customer> a = port.requestListCustomer(msv, qCode);
         List<Customer> res = new ArrayList<>();
         for (Customer c : a) {

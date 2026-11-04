@@ -8,15 +8,16 @@ d. Triệu gọi submitDataString(studentCode, qCode, data) để gửi chuỗi 
 e. Kết thúc chương trình client.
 */
 // Bài lấy từ hệ thống DB-Lab (Exam Server 36.50.135.242), chưa chạy thử với server thật.
-// Stub (package vn.medianews) cần sinh lại từ WSDL của đề (cổng 2221); tên lớp/phương thức theo đúng đề, nếu stub sinh ra khác thì sửa lại cho khớp.
+// Stub: sinh từ WSDL (cổng 2221) bằng New > Web Service Client (package ptit.dblab.judge.network.server.soap), rồi kéo vào Source Packages.
+// Tên lớp/getter theo quy luật của DataService (đã chạy AC); với Character/Object là suy luận, nếu khác thì sửa theo stub sinh ra.
 package WebService;
-import vn.medianews.*;
+import ptit.dblab.judge.network.server.soap.*;
 import java.util.*;
 public class Data13_DemSoNguyenToVaChecksum {
     public static void main(String[] args) throws Exception {
         String msv = "B23DCCN139", qCode = "1usPzrw5";
-        DataService_Service service = new DataService_Service();
-        DataService port = service.getDataServicePort();
+        DataService service = new DataService();
+        SoapDataService port = service.getSoapDataServicePort();
         List<Integer> a = port.getData(msv, qCode);
         int dem = 0;
         long sum = 0; // dùng long để tránh tràn khi nhân (i + 1) * value

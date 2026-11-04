@@ -15,13 +15,13 @@ d. Kết thúc chương trình client.
 */
 // Đáp án bổ sung (không có trong repo gốc), chưa kiểm chứng với server thật.
 package WebService;
-import vn.medianews.*;
+import ptit.dblab.judge.network.server.soap.*;
 import java.util.*;
 public class Character01_SapXepChuoiTheoSoNguyenAm {
     public static void main(String[] args) throws Exception {
         String msv = "B23DCCN139", qCode = "mDN1MFUJ";
-        CharacterService_Service service = new CharacterService_Service();
-        CharacterService port = service.getCharacterServicePort();
+        CharacterService service = new CharacterService();
+        SoapCharacterService port = service.getSoapCharacterServicePort();
         // a. Nhận mảng chuỗi từ server
         List<String> a = new ArrayList<>(port.requestStringArray(msv, qCode));
         System.out.println(a);

@@ -15,13 +15,13 @@ c. Triệu gọi phương thức submitListOrder(String studentCode, String qCod
 d. Kết thúc chương trình client.
 */
 package WebService;
-import vn.medianews.*;
+import ptit.dblab.judge.network.server.soap.*;
 import java.util.*;
 public class Object09_BaiToanQuanLyDonHang2 {
     public static void main(String[] args) throws Exception{
         String msv = "B23DCCN139", qCode = "CuW1L0ev"; 
-        ObjectService_Service service = new ObjectService_Service();
-        ObjectService port = service.getObjectServicePort();
+        ObjectService service = new ObjectService();
+        SoapObjectService port = service.getSoapObjectServicePort();
         List<Order>a = (List<Order>)port.requestListOrder(msv, qCode);
         for(Order x: a) System.out.println(x);
         HashMap<String, Float>mp = new HashMap<>();

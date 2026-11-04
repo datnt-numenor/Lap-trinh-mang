@@ -10,13 +10,13 @@ c. Triệu gọi phương thức submitCharacterCharArray(String studentCode, St
 d. Kết thúc chương trình client.
 */
 package WebService;
-import vn.medianews.*;
+import ptit.dblab.judge.network.server.soap.*;
 import java.util.*;
 public class Character09_XoayVongKyTu {
     public static void main(String[] args) throws Exception {
         String msv = "B23DCCN139", qCode = "YDcPHFgN"; 
-        CharacterService_Service service = new CharacterService_Service();
-        CharacterService port = service.getCharacterServicePort();
+        CharacterService service = new CharacterService();
+        SoapCharacterService port = service.getSoapCharacterServicePort();
         List<Integer>a = port.requestCharacter(msv, qCode);
         int timeRot = a.get(0)%(a.size());
         Collections.rotate(a, timeRot);

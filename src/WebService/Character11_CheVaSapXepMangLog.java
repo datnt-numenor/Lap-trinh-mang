@@ -10,15 +10,16 @@ d. Triệu gọi submitStringArray(studentCode, qCode, data) để gửi danh s�
 e. Kết thúc chương trình client.
 */
 // Bài lấy từ hệ thống DB-Lab (Exam Server 36.50.135.242), chưa chạy thử với server thật.
-// Stub (package vn.medianews) cần sinh lại từ WSDL của đề (cổng 2221); tên lớp/phương thức theo đúng đề, nếu stub sinh ra khác thì sửa lại cho khớp.
+// Stub: sinh từ WSDL (cổng 2221) bằng New > Web Service Client (package ptit.dblab.judge.network.server.soap), rồi kéo vào Source Packages.
+// Tên lớp/getter theo quy luật của DataService (đã chạy AC); với Character/Object là suy luận, nếu khác thì sửa theo stub sinh ra.
 package WebService;
-import vn.medianews.*;
+import ptit.dblab.judge.network.server.soap.*;
 import java.util.*;
 public class Character11_CheVaSapXepMangLog {
     public static void main(String[] args) throws Exception {
         String msv = "B23DCCN139", qCode = "43odKOzj";
-        CharacterService_Service service = new CharacterService_Service();
-        CharacterService port = service.getCharacterServicePort();
+        CharacterService service = new CharacterService();
+        SoapCharacterService port = service.getSoapCharacterServicePort();
         List<String> a = port.requestStringArray(msv, qCode);
         List<String> res = new ArrayList<>();
         for (String line : a) {

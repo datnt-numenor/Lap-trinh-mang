@@ -10,15 +10,15 @@ c. Triệu gọi phương thức submitCharacterStringArray(String studentCode, 
 d. Kết thúc chương trình client.
 */
 package WebService;
-import vn.medianews.*;
+import ptit.dblab.judge.network.server.soap.*;
 import java.util.*;
 public class Character03_SapXepChuoiTheoDoDaiChuoi {
     public static void main(String[] args) throws Exception {
         // Cấu hình thông tin
         String msv = "B23DCCN139", qCode = "mpu9xCxR"; 
         // Tạo đối tượng dịch vụ từ web service
-        CharacterService_Service service = new CharacterService_Service();
-        CharacterService port = service.getCharacterServicePort();
+        CharacterService service = new CharacterService();
+        SoapCharacterService port = service.getSoapCharacterServicePort();
         // a. Triệu gọi phương thức requestStringArray từ server 
         List<String> a = port.requestStringArray(msv, qCode);
         // b. Sắp xếp các chuỗi theo số lượng nguyên âm

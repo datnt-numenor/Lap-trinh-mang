@@ -10,13 +10,13 @@ c. Triệu gọi phương thức submitDataStringArray(String studentCode, Strin
 d. Kết thúc chương trình client.
 */
 package WebService;
-import vn.medianews.*;
+import ptit.dblab.judge.network.server.soap.*;
 import java.util.*;
 public class Data07_ChuyenDoiThapPhanSangNhiPhan {
     public static void main(String[] args) throws Exception{
         String msv = "B23DCCN139", qCode = "2jS1DTpU"; 
-        DataService_Service service = new DataService_Service();
-        DataService port = service.getDataServicePort();
+        DataService service = new DataService();
+        SoapDataService port = service.getSoapDataServicePort();
         List<Integer>a = port.getData(msv, qCode);
         System.out.println(a);
         List<String>ans = new java.util.ArrayList<>();

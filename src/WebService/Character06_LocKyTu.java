@@ -13,15 +13,15 @@ c. Triệu gọi phương thức submitCharacterString(String studentCode, Strin
 d. Kết thúc chương trình client.
 */
 package WebService;
-import vn.medianews.*;
+import ptit.dblab.judge.network.server.soap.*;
 import java.util.*;
 public class Character06_LocKyTu {
     public static void main(String[] args) throws Exception {
         // Cấu hình thông tin
         String msv = "B23DCCN139", qCode = "rT6Ql5GH"; 
         // Tạo đối tượng dịch vụ từ web service
-        CharacterService_Service service = new CharacterService_Service();
-        CharacterService port = service.getCharacterServicePort();
+        CharacterService service = new CharacterService();
+        SoapCharacterService port = service.getSoapCharacterServicePort();
         // a. Triệu gọi phương thức 
         String s = port.requestString(msv, qCode);
         System.out.println(s);

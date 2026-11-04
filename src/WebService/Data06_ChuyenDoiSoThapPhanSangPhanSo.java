@@ -10,7 +10,7 @@ c. Triệu gọi phương thức submitDataIntArray(String studentCode, String q
 d. Kết thúc chương trình client.
 */
 package WebService;
-import vn.medianews.*;
+import ptit.dblab.judge.network.server.soap.*;
 import java.util.*;
 public class Data06_ChuyenDoiSoThapPhanSangPhanSo {
     public static int gcd(int a, int b){
@@ -23,8 +23,8 @@ public class Data06_ChuyenDoiSoThapPhanSangPhanSo {
     }
     public static void main(String[] args) throws Exception{
         String msv = "B23DCCN139", qCode = "ny8Fb8BU"; 
-        DataService_Service service = new DataService_Service();
-        DataService port = service.getDataServicePort();
+        DataService service = new DataService();
+        SoapDataService port = service.getSoapDataServicePort();
         double a = port.getDataDouble(msv, qCode);
         a = Math.round(a * 100) / 100.0;
         System.out.println(a);

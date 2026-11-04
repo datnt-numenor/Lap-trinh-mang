@@ -10,13 +10,13 @@ c. Triệu gọi phương thức submitDataStringArray(String studentCode, Strin
 d. Kết thúc chương trình client. Bài này chú ý là in ra hệ hexa phải viết hoa
 */
 package WebService;
-import vn.medianews.*;
+import ptit.dblab.judge.network.server.soap.*;
 import java.util.*;
 public class Data08_HeCoSo8Va16 {
     public static void main(String[] args) throws Exception{
         String msv = "B23DCCN139", qCode = "QBDJ1GGL"; 
-        DataService_Service service = new DataService_Service();
-        DataService port = service.getDataServicePort();
+        DataService service = new DataService();
+        SoapDataService port = service.getSoapDataServicePort();
         List<Integer>a = port.getData(msv, qCode);
         System.out.println(a);
         List<String>res = new java.util.ArrayList<>();

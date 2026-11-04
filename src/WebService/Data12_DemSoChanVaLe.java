@@ -8,15 +8,16 @@ d. Triệu gọi submitDataStringArray(studentCode, qCode, data) để gửi dan
 e. Kết thúc client. Ví dụ: [652, 139, 822, 95, 755, 70, 809, 165, 580, 514, 921, 995, 97, 988, 666, 654] -> [EVEN=8, ODD=8].
 */
 // Bài lấy từ hệ thống DB-Lab (Exam Server 36.50.135.242), chưa chạy thử với server thật.
-// Stub (package vn.medianews) cần sinh lại từ WSDL của đề (cổng 2221); tên lớp/phương thức theo đúng đề, nếu stub sinh ra khác thì sửa lại cho khớp.
+// Stub: sinh từ WSDL (cổng 2221) bằng New > Web Service Client (package ptit.dblab.judge.network.server.soap), rồi kéo vào Source Packages.
+// Tên lớp/getter theo quy luật của DataService (đã chạy AC); với Character/Object là suy luận, nếu khác thì sửa theo stub sinh ra.
 package WebService;
-import vn.medianews.*;
+import ptit.dblab.judge.network.server.soap.*;
 import java.util.*;
 public class Data12_DemSoChanVaLe {
     public static void main(String[] args) throws Exception {
         String msv = "B23DCCN139", qCode = "QLFU3nZw";
-        DataService_Service service = new DataService_Service();
-        DataService port = service.getDataServicePort();
+        DataService service = new DataService();
+        SoapDataService port = service.getSoapDataServicePort();
         List<Integer> a = port.getData(msv, qCode);
         int chan = 0, le = 0;
         for (int x : a) {

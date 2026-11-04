@@ -17,13 +17,13 @@ d. Kết thúc chương trình client
 package WebService;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
-import vn.medianews.*;
+import ptit.dblab.judge.network.server.soap.*;
 import java.util.*;
 public class Object07_BaiToanQuanLyDuAn {
     public static void main(String[] args) throws Exception {
         String msv = "B23DCCN139", qCode = "R6UOuyyE";
-        ObjectService_Service service = new ObjectService_Service();
-        ObjectService port = service.getObjectServicePort();
+        ObjectService service = new ObjectService();
+        SoapObjectService port = service.getSoapObjectServicePort();
         List<Project>a = (List<Project>)port.requestListProject(msv, qCode);
         for(Project p: a) System.out.println(p);
         System.out.println();

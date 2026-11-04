@@ -17,13 +17,13 @@ List<Customer> customers) để gửi danh sách các khách hàng tiềm năng 
 d. Kết thúc chương trình client.
 */
 package WebService;
-import vn.medianews.*;
+import ptit.dblab.judge.network.server.soap.*;
 import java.util.*;
 public class Object08_BaiToanQuanLyKhachHang {
     public static void main(String[] args) throws Exception{
         String msv = "B23DCCN139", qCode = "lgKj7lIF"; 
-        ObjectService_Service service = new ObjectService_Service();
-        ObjectService port = service.getObjectServicePort();
+        ObjectService service = new ObjectService();
+        SoapObjectService port = service.getSoapObjectServicePort();
         List<Customer>a = (List<Customer>)port.requestListCustomer(msv, qCode);
         for(Customer x: a) System.out.println(x);
         List<Customer>ans = new java.util.ArrayList<>();

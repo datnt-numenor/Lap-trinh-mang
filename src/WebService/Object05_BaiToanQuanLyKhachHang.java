@@ -13,12 +13,12 @@ package WebService;
 import java.util.*;
 import java.time.*;
 import java.time.temporal.ChronoUnit;
-import vn.medianews.*;
+import ptit.dblab.judge.network.server.soap.*;
 public class Object05_BaiToanQuanLyKhachHang {
     public static void main(String[] args) throws Exception {
         String msv = "B23DCCN139", qCode = "aYiLQ3wo";
-        ObjectService_Service service = new ObjectService_Service();
-        ObjectService port = service.getObjectServicePort();
+        ObjectService service = new ObjectService();
+        SoapObjectService port = service.getSoapObjectServicePort();
         List<CustomerY> cus = (List<CustomerY>) port.requestListCustomerY(msv, qCode);
         for (CustomerY x: cus) System.out.println(x);
         System.out.println();

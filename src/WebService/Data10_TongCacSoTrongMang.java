@@ -10,13 +10,13 @@ c. Triệu gọi phương thức submitDataInt(String studentCode, String qCode,
 d. Kết thúc chương trình client.
 */
 package WebService;
-import vn.medianews.*;
+import ptit.dblab.judge.network.server.soap.*;
 import java.util.*;
 public class Data10_TongCacSoTrongMang {
     public static void main(String[] args) throws Exception{
         String msv = "B23DCCN139", qCode = "hnVAHv3I"; 
-        DataService_Service service = new DataService_Service();
-        DataService port = service.getDataServicePort();
+        DataService service = new DataService();
+        SoapDataService port = service.getSoapDataServicePort();
         List<Integer>a = port.getData(msv, qCode);
         System.out.println(a);
         int tong = 0;

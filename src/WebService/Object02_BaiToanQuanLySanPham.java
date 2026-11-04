@@ -21,13 +21,13 @@ finalPrice = 100 * (1 + 10/100) * (1 - 5/100) = 104.5 Đối tượng ProductY v
 d. Kết thúc chương trình client.
 */
 package WebService;
-import vn.medianews.*;
+import ptit.dblab.judge.network.server.soap.*;
 import java.util.*;
 public class Object02_BaiToanQuanLySanPham {
     public static void main(String[] args) throws Exception {
         String msv = "B23DCCN139", qCode = "itT8hvxF"; // Mã câu hỏi
-        ObjectService_Service service = new ObjectService_Service();
-        ObjectService port = service.getObjectServicePort();
+        ObjectService service = new ObjectService();
+        SoapObjectService port = service.getSoapObjectServicePort();
         ProductY product = (ProductY) port.requestProductY(msv, qCode);
         System.out.println(product);
         float price = product.getPrice(), taxRate = product.getTaxRate(),discount = product.getDiscount();

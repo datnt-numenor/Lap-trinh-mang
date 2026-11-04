@@ -14,13 +14,13 @@ gửi chuỗi kết quả đã xử lý trở lại server. Ví dụ: Nếu chu�
 e. Kết thúc chương trình client.
 */
 package WebService;
-import vn.medianews.*;
+import ptit.dblab.judge.network.server.soap.*;
 import java.util.*;
 public class Character04_TuDaiNhatVaTuNganNhat {
     public static void main(String[] args) throws Exception {
         String msv = "B23DCCN139", qCode = "9n2rfqST"; 
-        CharacterService_Service service = new CharacterService_Service();
-        CharacterService port = service.getCharacterServicePort();
+        CharacterService service = new CharacterService();
+        SoapCharacterService port = service.getSoapCharacterServicePort();
         String s = port.requestString(msv, qCode);
         System.out.println(s);
         String []tmp = s.trim().split("\\s+");

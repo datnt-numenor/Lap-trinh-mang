@@ -14,13 +14,13 @@ c. Triệu gọi phương thức submitListStudentY(String studentCode, String q
 d. Kết thúc chương trình client.
 */
 package WebService;
-import vn.medianews.*;
+import ptit.dblab.judge.network.server.soap.*;
 import java.util.*;
 public class Object01_BaiToanQuanLySinhVien {
     public static void main(String[] args) throws Exception {
         String msv = "B23DCCN139", qCode = "2RjVBzv0"; // Mã câu hỏi
-        ObjectService_Service service = new ObjectService_Service();
-        ObjectService port = service.getObjectServicePort();
+        ObjectService service = new ObjectService();
+        SoapObjectService port = service.getSoapObjectServicePort();
         List<StudentY> a = (List<StudentY>) port.requestListStudentY(msv, qCode);
         for (StudentY x : a) System.out.println(x);
         System.out.println();
